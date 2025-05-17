@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verificador de edad">
+    <title>Verificador de Edad</title>
+    <link rel="stylesheet" href="../CSS/ejercicio01.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="title">Verificador de Edad</h1>
+        
+        <form id="ageForm" class="form">
+            <label for="ageInput" class="form__label">Ingresa una edad:</label>
+            <input 
+                type="number" 
+                id="ageInput" 
+                class="form__input" 
+                min="1" 
+                max="120" 
+                required
+                aria-required="true"
+            >
+            <button type="submit" class="form__button">Verificar</button>
+        </form>
+
+        <div id="result" class="result" aria-live="polite"></div>
+    </main>
+
+    <script src="../JS/Ejercicio01.js" defer></script>
+</body>
+</html>

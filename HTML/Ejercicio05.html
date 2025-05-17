@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos Ford</title>
+    <link rel="stylesheet" href="../CSS/ejercicio05.css">
+   </head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="brand">
+                <img src="https://www.ford.com.ar/content/dam/Ford/website-assets/latam/ar/homepage/ford-blue-logo.png" alt="Ford Logo" class="logo">
+                <h1>Calculadora de Descuentos</h1>
+            </div>
+            <p>Descubre tu descuento especial según el modelo Ford</p>
+        </header>
+
+        <main class="main-content">
+            <form id="discountForm" class="discount-form">
+                <div class="form-group">
+                    <label for="carModel">Modelo del Vehículo:</label>
+                    <select id="carModel" class="form-select" required>
+                        <option value="">Seleccione un modelo</option>
+                        <option value="FORD FIESTA">Ford Fiesta</option>
+                        <option value="FORD FOCUS">Ford Focus</option>
+                        <option value="FORD ESCAPE">Ford Escape</option>
+                        <option value="OTRO">Otro modelo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="carPrice">Precio Base ($):</label>
+                    <div class="input-with-icon">
+                        <span class="currency">$</span>
+                        <input type="number" id="carPrice" min="0" step="0.01" class="form-input" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    <i class="fas fa-calculator"></i> Calcular Descuento
+                </button>
+            </form>
+
+            <div id="result" class="result-card hidden">
+                <div class="result-header">
+                    <h2>Resumen de Compra</h2>
+                    <div class="discount-badge" id="discountBadge">0% OFF</div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="detail-item">
+                        <span>Modelo:</span>
+                        <span id="resultModel">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>Precio Base:</span>
+                        <span id="resultPrice">$0.00</span>
+                    </div>
+                    <div class="detail-item highlight">
+                        <span>Descuento:</span>
+                        <span id="resultDiscount">0%</span>
+                    </div>
+                    <div class="detail-item total">
+                        <span>Precio Final:</span>
+                        <span id="resultFinal">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="result-footer">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Los descuentos son válidos hasta agotar stock. Sujeto a condiciones.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 Ford Argentina - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    
+    <script src="../JS/Ejercicio05.js"></script>
+</body>
+</html>

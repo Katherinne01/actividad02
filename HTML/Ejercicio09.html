@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Temperatura</title>
+    <link rel="stylesheet" href="../CSS/ejercicio09.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-thermometer-half"></i> Analizador de Temperatura</h1>
+            <p>Convierte °C a °F y obtén un análisis de la temperatura</p>
+        </header>
+
+        <main class="main-content">
+            <form id="tempForm" class="temp-form">
+                <div class="form-group">
+                    <label for="celsiusInput"><i class="fas fa-temperature-low"></i> Temperatura en Celsius (°C):</label>
+                    <input type="number" id="celsiusInput" class="form-input" step="0.1" placeholder="Ej: 25" required>
+                </div>
+
+                <button type="submit" class="analyze-btn">
+                    <i class="fas fa-search"></i> Analizar Temperatura
+                </button>
+            </form>
+
+            <div id="result" class="result-card hidden">
+                <div class="result-header">
+                    <h2>Resultado del Análisis</h2>
+                    <div class="temp-scale">
+                        <span class="temp-label">°C</span>
+                        <span id="celsiusResult" class="temp-value">0</span>
+                        <span class="temp-convert"><i class="fas fa-exchange-alt"></i></span>
+                        <span class="temp-label">°F</span>
+                        <span id="fahrenheitResult" class="temp-value">0</span>
+                    </div>
+                </div>
+
+                <div class="temp-status" id="tempStatus">
+                    <div class="status-icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="status-message">Temperatura desconocida</div>
+                </div>
+
+                <div class="temp-range">
+                    <div class="range-scale">
+                        <div class="range-labels">
+                            <span>Baja</span>
+                            <span>Adecuada</span>
+                            <span>Alta</span>
+                        </div>
+                        <div class="range-bar">
+                            <div class="range-indicator" id="rangeIndicator"></div>
+                        </div>
+                        <div class="range-markers">
+                            <span>14°F</span>
+                            <span>32°F</span>
+                            <span>68°F</span>
+                            <span>96°F</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 Analizador Climático - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="../JS/Ejercicio09.js"></script>
+</body>
+</html>

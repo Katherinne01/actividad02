@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuentos en Viajes</title>
+    <link rel="stylesheet" href="../CSS/ejercicio06.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-route"></i> Descuentos en Viajes</h1>
+            <p>Calcula tu descuento especial para viajes desde Palma</p>
+        </header>
+
+        <main class="main-content">
+            <form id="travelForm" class="travel-form">
+                <div class="form-group">
+                    <label for="origin"><i class="fas fa-map-marker-alt"></i> Origen:</label>
+                    <select id="origin" class="form-select" required>
+                        <option value="">Seleccione origen</option>
+                        <option value="palma" selected>Palma</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="destination"><i class="fas fa-location-arrow"></i> Destino:</label>
+                    <select id="destination" class="form-select" required>
+                        <option value="">Seleccione destino</option>
+                        <option value="la costa del sol">La Costa del Sol</option>
+                        <option value="panchimalco">Panchimalco</option>
+                        <option value="puerto el triunfo">Puerto El Triunfo</option>
+                        <option value="otro">Otro destino</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    <i class="fas fa-percentage"></i> Calcular Descuento
+                </button>
+            </form>
+
+            <div id="result" class="result-card hidden">
+                <div class="result-header">
+                    <h2>Detalle del Viaje</h2>
+                    <div class="discount-badge" id="discountBadge">0%</div>
+                </div>
+                
+                <div class="route-display">
+                    <div class="location">
+                        <div class="location-dot origin"></div>
+                        <span id="originResult">Palma</span>
+                    </div>
+                    
+                    <div class="route-line">
+                        <div class="transport-icon"><i class="fas fa-bus"></i></div>
+                    </div>
+                    
+                    <div class="location">
+                        <div class="location-dot destination"></div>
+                        <span id="destinationResult">-</span>
+                    </div>
+                </div>
+
+                <div class="result-details">
+                    <div class="detail-item highlight">
+                        <span>Descuento aplicable:</span>
+                        <span id="resultDiscount">0%</span>
+                    </div>
+                </div>
+
+                <div class="result-footer">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Los descuentos son válidos para viajes directos desde Palma. Sujeto a disponibilidad.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 Viajes Turísticos - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    
+    <script src="../JS/Ejercicio06.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Números</title>
+    <link rel="stylesheet" href="../CSS/ejercicio04.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Comparador de Números</h1>
+            <p>Ingresa dos números para encontrar cuál es el mayor</p>
+        </header>
+
+        <main class="main-content">
+            <form id="comparatorForm" class="comparator-form">
+                <div class="input-group">
+                    <div class="form-group">
+                        <label for="number1">Primer Número:</label>
+                        <input type="number" id="number1" step="any" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="number2">Segundo Número:</label>
+                        <input type="number" id="number2" step="any" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="compare-btn">Comparar</button>
+            </form>
+
+            <div id="result" class="result-card hidden">
+                <div class="result-content">
+                    <h2>Resultado</h2>
+                    <div class="numbers-display">
+                        <div class="number-box" id="num1-display">
+                            <span class="number-label">Número 1</span>
+                            <span class="number-value" id="num1-value"></span>
+                        </div>
+                        <div class="vs-circle">VS</div>
+                        <div class="number-box" id="num2-display">
+                            <span class="number-label">Número 2</span>
+                            <span class="number-value" id="num2-value"></span>
+                        </div>
+                    </div>
+                    <div class="winner-display">
+                        <span>El número mayor es:</span>
+                        <span id="winner-value" class="winner"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Sistema de Comparación Numérica</p>
+        </footer>
+    </div>
+
+    <script src="../JS/Ejercicio04.js"></script>
+</body>
+</html>

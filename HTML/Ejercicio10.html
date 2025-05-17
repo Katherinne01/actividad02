@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Promedios por Turno</title>
+    <link rel="stylesheet" href="../CSS/ejercicio10.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-chart-line"></i> Promedios por Turno</h1>
+            <p>Analiza los promedios de edad en diferentes turnos</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="turno-input">
+                    <h2><i class="fas fa-sun"></i> Turno Mañana</h2>
+                    <textarea id="mananaInput" class="form-input" rows="3" placeholder="Ingrese edades separadas por comas (ej: 20, 22, 19)">20, 22, 19, 21, 20</textarea>
+                </div>
+
+                <div class="turno-input">
+                    <h2><i class="fas fa-cloud-sun"></i> Turno Tarde</h2>
+                    <textarea id="tardeInput" class="form-input" rows="3" placeholder="Ingrese edades separadas por comas (ej: 18, 19, 20)">18, 19, 20, 17, 18, 19</textarea>
+                </div>
+
+                <div class="turno-input">
+                    <h2><i class="fas fa-moon"></i> Turno Noche</h2>
+                    <textarea id="nocheInput" class="form-input" rows="3" placeholder="Ingrese edades separadas por comas (ej: 25, 23, 24)">25, 23, 24, 22, 25, 26, 24, 23, 22, 25, 24</textarea>
+                </div>
+
+                <button id="calculateBtn" class="calculate-btn">
+                    <i class="fas fa-calculator"></i> Calcular Promedios
+                </button>
+            </div>
+
+            <div id="result" class="result-section hidden">
+                <h2><i class="fas fa-poll-h"></i> Resultados</h2>
+                
+                <div class="results-grid">
+                    <div class="result-card manana">
+                        <div class="card-header">
+                            <i class="fas fa-sun"></i>
+                            <h3>Mañana</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="stat">
+                                <span class="stat-label">Cantidad:</span>
+                                <span class="stat-value" id="countManana">0</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Promedio:</span>
+                                <span class="stat-value" id="promedioManana">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-card tarde">
+                        <div class="card-header">
+                            <i class="fas fa-cloud-sun"></i>
+                            <h3>Tarde</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="stat">
+                                <span class="stat-label">Cantidad:</span>
+                                <span class="stat-value" id="countTarde">0</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Promedio:</span>
+                                <span class="stat-value" id="promedioTarde">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-card noche">
+                        <div class="card-header">
+                            <i class="fas fa-moon"></i>
+                            <h3>Noche</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="stat">
+                                <span class="stat-label">Cantidad:</span>
+                                <span class="stat-value" id="countNoche">0</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Promedio:</span>
+                                <span class="stat-value" id="promedioNoche">0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conclusion-card" id="conclusionCard">
+                    <div class="conclusion-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="conclusion-text">
+                        El turno con mayor promedio es: <span id="turnoMayor">-</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 Análisis Estadístico - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    
+    <script src="../JS/Ejercicio10.js"></script>
+</body>
+</html>

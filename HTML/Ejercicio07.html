@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Valores</title>
+    <link rel="stylesheet" href="../CSS/ejercicio07.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-chart-bar"></i> Analizador de Valores</h1>
+            <p>Ingresa una lista de números para analizar sus propiedades</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="numberInput"><i class="fas fa-list-ol"></i> Valores (separados por comas):</label>
+                    <textarea id="numberInput" class="form-input" rows="4" placeholder="Ej: 10, -5, 30, 7, -8, 15, 0, 22, -3, 45"></textarea>
+                </div>
+
+                <button id="analyzeBtn" class="analyze-btn">
+                    <i class="fas fa-search"></i> Analizar Valores
+                </button>
+            </div>
+
+            <div id="result" class="result-section hidden">
+                <h2><i class="fas fa-poll"></i> Resultados del Análisis</h2>
+                
+                <div class="numbers-display" id="numbersDisplay">
+                    <!-- Números se mostrarán aquí -->
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card negative">
+                        <div class="stat-icon"><i class="fas fa-minus-circle"></i></div>
+                        <div class="stat-value" id="negativos">0</div>
+                        <div class="stat-label">Negativos</div>
+                    </div>
+
+                    <div class="stat-card positive">
+                        <div class="stat-icon"><i class="fas fa-plus-circle"></i></div>
+                        <div class="stat-value" id="positivos">0</div>
+                        <div class="stat-label">Positivos</div>
+                    </div>
+
+                    <div class="stat-card multiple">
+                        <div class="stat-icon"><i class="fas fa-divide"></i></div>
+                        <div class="stat-value" id="multiplos15">0</div>
+                        <div class="stat-label">Múltiplos de 15</div>
+                    </div>
+
+                    <div class="stat-card even">
+                        <div class="stat-icon"><i class="fas fa-equals"></i></div>
+                        <div class="stat-value" id="sumaPares">0</div>
+                        <div class="stat-label">Suma Pares</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 Análisis Numérico - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+   
+    <script src="../JS/Ejercicio07.js"></script>
+</body>
+</html>
