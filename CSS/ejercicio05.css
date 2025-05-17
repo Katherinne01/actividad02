@@ -1,0 +1,251 @@
+:root {
+    --ford-blue: #2c3968;
+    --ford-blue-light: #3a4a8a;
+    --ford-orange: #e04e10;
+    --success: #28a745;
+    --text: #333333;
+    --text-light: #777777;
+    --bg: #f5f7fa;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: var(--ford-blue);
+    font-weight: 600;
+}
+
+.header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.discount-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--ford-blue);
+}
+
+.form-select, .form-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-select:focus, .form-input:focus {
+    outline: none;
+    border-color: var(--ford-blue);
+    box-shadow: 0 0 0 3px rgba(44, 57, 104, 0.2);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.currency {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.input-with-icon .form-input {
+    padding-left: 2rem;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--ford-orange);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.calculate-btn:hover {
+    background-color: var(--ford-blue);
+    transform: translateY(-2px);
+}
+
+.result-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.5s ease;
+    border-top: 4px solid var(--ford-orange);
+}
+
+.result-card.hidden {
+    display: none;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.result-header h2 {
+    color: var(--ford-blue);
+    font-size: 1.5rem;
+}
+
+.discount-badge {
+    background-color: var(--success);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.result-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-item span:first-child {
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.detail-item.highlight {
+    background-color: rgba(44, 57, 104, 0.05);
+    padding: 0.8rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.detail-item.total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--ford-blue);
+}
+
+.detail-item.total span:last-child {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ford-blue);
+}
+
+.result-footer {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(224, 78, 16, 0.1);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.result-footer i {
+    color: var(--ford-orange);
+    margin-top: 0.2rem;
+}
+
+.result-footer p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    .brand {
+        flex-direction: column;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}
